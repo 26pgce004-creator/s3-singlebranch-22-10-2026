@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample One Page HTML</title>
+    <style>
+        /* Base Reset & Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f7f6;
+        }
+
+        /* Navigation */
+        header {
+            background-color: #2c3e50;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        nav .logo {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #fff;
+        }
+
+        /* Main Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1abc9c, #3498db);
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        /* Content Sections */
+        .container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        /* Interactive Component */
+        .interactive-box {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 3rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        button {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-top: 1rem;
+        }
+        button:hover {
+            background-color: #c0392b;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #bdc3c7;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 5rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <nav>
+            <div class="logo">MyWebsite</div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to Your New Website</h1>
+        <p>This is a simple, lightweight, and modern single-page HTML template ready for your custom content.</p>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <h2>Key Features</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Responsive Design</h3>
+                <p>The layout automatically adapts to fit mobile devices, tablets, and desktop screens perfectly.</p>
+            </div>
+            <div class="card">
+                <h3>Clean Code</h3>
+                <p>Organized structure separating content (HTML), presentation (CSS), and behavior (JavaScript).</p>
+            </div>
+            <div class="card">
+                <h3>Blazing Fast</h3>
+                <p>Zero heavy frameworks or external dependencies ensure rapid load times right out of the box.</p>
+            </div>
+        </div>
+
+        <!-- Interactive Demo Area -->
+        <div class="interactive-box">
+            <h3>Try an Interactive Action</h3>
+            <p id="status-text">Click the button below to trigger a JavaScript action.</p>
+            <button id="action-btn">Click Me</button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 MyWebsite. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript Behavior -->
+    <script>
+        const button = document.getElementById('action-btn');
+        const text = document.getElementById('status-text');
+
+        button.addEventListener('click', () => {
+            text.textContent = '🎉 Awesome! The JavaScript code worked perfectly.';
+            text.style.color = '#27ae60';
+            text.style.fontWeight = 'bold';
+            button.textContent = 'Success!';
+            button.style.backgroundColor = '#27ae60';
+        });
+    </script>
+</body>
+</html>
